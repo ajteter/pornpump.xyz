@@ -1,18 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { 
-  Coins, 
-  Shield, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  Lock, 
-  Globe, 
-  Heart,
-  DollarSign,
-  Star
-} from 'lucide-react'
+import { Coins, Shield, TrendingUp, Users, Zap, Globe } from 'lucide-react'
+
+// 组件代码保持不变...
+
 
 export default function Features() {
   const creatorFeatures = [
