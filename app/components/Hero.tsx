@@ -1,7 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Play, Zap } from 'lucide-react'
+import { Play, TrendingUp, Users, Zap } from 'lucide-react'
+
+// 组件代码保持不变...
+
 
 export default function Hero() {
   return (
