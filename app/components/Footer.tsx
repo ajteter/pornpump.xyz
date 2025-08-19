@@ -1,12 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Twitter, Github, Telegram, Mail, ExternalLink } from 'lucide-react'
+import { Twitter, Github, Send, Mail, ExternalLink } from 'lucide-react'
 
 export default function Footer() {
   const socialLinks = [
     { icon: <Twitter className="w-5 h-5" />, href: "#", label: "Twitter" },
-    { icon: <Telegram className="w-5 h-5" />, href: "#", label: "Telegram" },
+    { icon: <Send className="w-5 h-5" />, href: "#", label: "Telegram" }, // 使用 Send 替代 Telegram
     { icon: <Github className="w-5 h-5" />, href: "#", label: "GitHub" },
     { icon: <Mail className="w-5 h-5" />, href: "#", label: "Email" },
   ]
@@ -63,10 +63,10 @@ export default function Footer() {
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-orange-500 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">P</span>
                 </div>
-                <span className="text-xl font-bold gradient-text">PornPump.xyz</span>
+                <span className="text-xl font-bold bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">PornPump.xyz</span>
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
@@ -82,7 +82,7 @@ export default function Footer() {
                     href={social.href}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-primary-500 hover:bg-primary-500/20 transition-all duration-200"
+                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-pink-500 hover:bg-pink-500/20 transition-all duration-200"
                     aria-label={social.label}
                   >
                     {social.icon}
@@ -106,7 +106,7 @@ export default function Footer() {
                   <li key={linkIndex}>
                     <a
                       href={link.href}
-                      className="text-gray-400 hover:text-primary-500 transition-colors duration-200 flex items-center gap-1"
+                      className="text-gray-400 hover:text-pink-500 transition-colors duration-200 flex items-center gap-1"
                     >
                       {link.name}
                       {link.href.startsWith('http') && <ExternalLink className="w-3 h-3" />}
@@ -123,7 +123,7 @@ export default function Footer() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="glass-effect p-8 rounded-2xl mb-12"
+          className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl mb-12"
         >
           <div className="text-center md:text-left md:flex md:items-center md:justify-between">
             <div className="mb-4 md:mb-0">
@@ -134,12 +134,12 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors duration-200"
+                className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 transition-colors duration-200"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-primary-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold whitespace-nowrap"
+                className="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold whitespace-nowrap"
               >
                 Subscribe
               </motion.button>
