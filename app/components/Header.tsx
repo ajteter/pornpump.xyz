@@ -1,8 +1,11 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
-import { useState } from 'react'
+import { Menu, X, Wallet } from 'lucide-react'
+
+// 组件代码保持不变...
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
